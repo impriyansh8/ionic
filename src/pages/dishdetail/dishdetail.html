@@ -59,4 +59,15 @@
       <p>-- {{comment.author}} {{comment.date | date}}</p>
     </ion-item>
   </ion-list>
+
+  <ion-fab [hidden]="favorite" right bottom>
+    <button ion-fab (click)="addToFavorites()">
+      <ion-icon name="heart-outline"></ion-icon>
+    </button>
+  </ion-fab>
+  <ion-fab *ngIf="favorite" right bottom>
+    <button ion-fab>
+      <ion-icon name="heart"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>

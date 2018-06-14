@@ -23,6 +23,7 @@ import { LeaderProvider } from '../providers/leader/leader';
 import { PromotionProvider } from '../providers/promotion/promotion';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
 import { FavoriteProvider } from '../providers/favorite/favorite';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import { FavoriteProvider } from '../providers/favorite/favorite';
     PromotionProvider,
     ProcessHttpmsgProvider,
     { provide: 'BaseURL', useValue: baseURL },
-    FavoriteProvider
+    FavoriteProvider,
+    LocalNotifications
   ]
 })
 export class AppModule {}

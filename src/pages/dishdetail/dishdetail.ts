@@ -68,7 +68,7 @@ export class DishdetailPage {
         {
           text: 'Share via Facebook',
           handler: () => {
-            this.socialSharing.shareViaFacebook(this.dish.name + ' -- ' + this.dish.description, this.dish.image, '')
+            this.socialSharing.shareViaFacebook(this.dish.name + ' -- ' + this.dish.description, this.BaseURL + this.dish.image, '')
               .then(() => console.log('Posted successfully to Facebook'))
               .catch(() => console.log('Failed to post to Facebook'));
           }
@@ -76,7 +76,7 @@ export class DishdetailPage {
         {
           text: 'Share via Twitter',
           handler: () => {
-            this.socialSharing.shareViaTwitter(this.dish.name + ' -- ' + this.dish.description, this.dish.image, '')
+            this.socialSharing.shareViaTwitter(this.dish.name + ' -- ' + this.dish.description, this.BaseURL + this.dish.image, '')
               .then(() => console.log('Posted successfully to Twitter'))
               .catch(() => console.log('Failed to post to Twitter'));
           }

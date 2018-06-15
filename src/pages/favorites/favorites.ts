@@ -63,7 +63,7 @@ export class FavoritesPage {
             });
             loading.present();
             this.favoriteService.deleteFavorite(id)
-              .subscribe(favorites => { this.favorites = favorites; loading.dismiss(); toast.dismiss(); },
+              .subscribe(favorites => { this.favorites = favorites; loading.dismiss(); toast.present(); },
               errmess => { this.errMess = errmess; loading.dismiss(); });     
           }
         }
